@@ -16,8 +16,8 @@ async def storefile(c, m):
     # text
     text = ""
     if not m.photo:
-        text = "--**🗃️ File Details:**--\n"
-        text += f"📂 __File Name:__ `{media.file_name}`\n\n" if media.file_name else ""
+  
+        text += f"File Name: `{media.file_name}`\n\n" if media.file_name else ""
         if not m.document:
             text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
             if m.audio:
@@ -36,7 +36,7 @@ async def storefile(c, m):
     txt = urllib.parse.quote(text.replace('--', ''))
     share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
     
-    text += f"<code>{url}</code>"
+    text += f"Link: <code>{url}</code>"
 
     # making buttons
     buttons = [[

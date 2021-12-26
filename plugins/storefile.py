@@ -38,7 +38,7 @@ async def storefile(c, m):
     txt = urllib.parse.quote(text.replace('--', ''))
     share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
     text += f"<code>{url}</code>"
-    text += f"\n_______________\n<b>Short URL</b> - <code>{short_url}</code>"
+    text += f"\n<b>Short URL</b> - <code>{short_url}</code>"
 
     # making buttons
     buttons = [[

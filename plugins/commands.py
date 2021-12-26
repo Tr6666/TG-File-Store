@@ -180,9 +180,12 @@ async def batch(c, m):
     send = await c.send_message(m.from_user.id, string_base64) if not DB_CHANNEL_ID else await c.send_message(int(DB_CHANNEL_ID), string_base64)
     base64_string = await encode_string(f"batch_{m.chat.id}_{send.message_id}")
     bot = await c.get_me()
-    url = f"Link - <code>https://telegram.me/{bot.username}?start={base64_string}</code>"
+    url = f"https://telegram.me/{bot.username}?start={base64_string}"
+    short_url = f"https://droplink.co/st?api=1aab74171e9891abd0ba799e3fd568c9598a79e1&url={url}"
+    link = f"Link : {url}\n\n\n Droplink : {short_url}"
+    
 
-    await message.edit(text=url)
+    await message.edit(text=link)
 
 @Client.on_message(filters.command('mode') & filters.incoming & filters.private)
 async def set_mode(c,m):

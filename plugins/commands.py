@@ -75,7 +75,7 @@ async def start(c, m, cb=False):
                     return await m.reply_text(f"🥴 Sorry bro your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 {owner.mention(style='md')}")
 
                 await msg.copy(m.from_user.id)
-                await asyncio.sleep(1)
+                await asyncio.sleep(0.5)
             return
 
         chat_id, msg_id = m.command[1].split('_')
@@ -174,7 +174,7 @@ async def batch(c, m):
         else:
             copy_message = await file.copy(m.from_user.id)
         string += f"{copy_message.message_id}-"
-        await asyncio.sleep(1)
+        await asyncio.sleep(0.5)
 
     string_base64 = await encode_string(string[:-1])
     send = await c.send_message(m.from_user.id, string_base64) if not DB_CHANNEL_ID else await c.send_message(int(DB_CHANNEL_ID), string_base64)

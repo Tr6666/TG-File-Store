@@ -37,7 +37,7 @@ async def storefile(c, m):
     short_url = f"https://droplink.co/st?api=1aab74171e9891abd0ba799e3fd568c9598a79e1&url={url}"
     txt = urllib.parse.quote(text.replace('--', ''))
     share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
-    text += f"<b>Long URL</b><code>{url}</code>"
+    text += f"<b>Long URL</b> - <code>{url}</code>"
     text += f"\n\n<b>Short URL</b> - <code>{short_url}</code>"
 
     # making buttons

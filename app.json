@@ -33,6 +33,18 @@
       "value": "",
       "required": false
     },
+
+    
+    "SITE": {
+      "description": "Your preferred shortner site Eg: droplink.co. Avoid https:// or http://.",
+      "value": "",
+      "required": false
+    }, 
+    "API_KEY": {
+      "description": "You API_ID from https://droplink.co/member/tools/api",
+      "value": "",
+      "required": false
+    },     
     "OWNER_ID": {
       "description": "give your telegram user id here",
       "value": ""

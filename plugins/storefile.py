@@ -34,11 +34,11 @@ async def storefile(c, m):
     bot = await c.get_me()
     base64_string = await encode_string(f"{m.chat.id}_{msg.message_id}")
     url = f"https://telegram.dog/{bot.username}?start={base64_string}"
-    short_url = f"https://droplink.co/st?api=1aab74171e9891abd0ba799e3fd568c9598a79e1&url={url}"
+    short_url = f"https://{SITE}/st?api={API_KEY}&url={url}"
     txt = urllib.parse.quote(text.replace('--', ''))
-    share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
+    share_url = f"tg://share?url={txt}File%20Link%20👉%20{short_url}"
     text += f"<b>Url</b> - <code>{url}</code>"
-    text += f"\n\n<b>Drolink URL</b> - <code>{short_url}</code>"
+    text += f"\n\n<b>Droplink URL</b> - <code>{short_url}</code>"
 
     # making buttons
     buttons = [[
@@ -92,7 +92,7 @@ async def storefile_channel(c, m):
     bot = await c.get_me()
     base64_string = await encode_string(f"{m.chat.id}_{msg.message_id}")
     url = f"https://telegram.dog/{bot.username}?start={base64_string}"
-    short_url = f"https://droplink.co/st?api=1aab74171e9891abd0ba799e3fd568c9598a79e1&url={url}"
+    short_url = f"https://{SITE}/st?api={API_KEY}&url={url}"
     txt = urllib.parse.quote(text.replace('--', ''))
     share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
 

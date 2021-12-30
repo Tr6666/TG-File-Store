@@ -2,6 +2,7 @@ import os
 import asyncio
 import logging
 import logging.config
+from config import *
 
 # Get logging configurations
 logging.getLogger().setLevel(logging.ERROR)
@@ -181,7 +182,7 @@ async def batch(c, m):
     base64_string = await encode_string(f"batch_{m.chat.id}_{send.message_id}")
     bot = await c.get_me()
     url = f"https://telegram.me/{bot.username}?start={base64_string}"
-    short_url = f"https://droplink.co/st?api=1aab74171e9891abd0ba799e3fd568c9598a79e1&url={url}"
+    short_url = f"https://{SITE}/st?api={API_KEY}&url={url}"
     link = f"<b>Url</b> - <code>{url}</code>\n\n <b>Droplink Url</b> - <code>{short_url}</code>"
     
 

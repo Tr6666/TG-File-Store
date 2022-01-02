@@ -29,7 +29,7 @@
       "value": ""
     },
     "UPDATE_CHANNEL": {
-      "description": "Your bot updates channel like Ns_bot_updates (username without @ for forcesub). (Leave empty it you don't want to add)",
+      "description": "Your bot updates channel like t2links (username without @ for forcesub). (Leave empty it you don't want to add)",
       "value": "",
       "required": false
     },

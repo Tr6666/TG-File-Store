@@ -41,7 +41,7 @@ Press the button Deploy to heroku and give the values for the config vars. 👇
 
 ## Credits
 
-- This bot made possible throught - [Original Repository](https://github.com/Ns-Bots/TG-File-Store)
+- This bot made possible through - [Original Repository](https://github.com/Ns-Bots/TG-File-Store)
 - Thanks to [Maxx](https://github.com/Ns-AnoNymouS)
 
 ######## THANK YOU ########

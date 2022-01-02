@@ -1,7 +1,7 @@
 
 ![Maxx](https://telegra.ph/file/a31837accd94caad73204.jpg)
 
-This is a telegram bot helps you to store your files, get the shareable permanent link and can short the stored files link from your preffered url shortner website.
+This is a telegram bot helps you to store your files, get the shareable permanent link and can short the stored files link from your preferred url shortener website.
 Just forward a telegram file and this bot gives you the telegram shareable link with shorten url. Made so simple for you to work.
 
 <a href="https://telegram.dog/directtamilmoviesbot"><img src="https://img.shields.io/badge/Telegram-Bot-blue.svg?logo=telegram"></a>

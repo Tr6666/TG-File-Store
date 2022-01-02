@@ -7,10 +7,10 @@
     "Store",
     "Files"
   ],
-  "logo": "https://telegra.ph/file/bdd3352951be090a56590.jpg",
-  "success_url": "https://telegram.dog/filestore_Nsbot",
-  "website": "https://github.com/Ns-Bots/TG-File-Store",
-  "repository": "https://github.com/Ns-Bots/TG-File-Store",
+  "logo": "https://telegra.ph/file/a31837accd94caad73204.jpg",
+  "success_url": "https://telegram.me/directtamilmoviesbot",
+  "website": "https://github.com/kevinnadar22/TG-File-Store",
+  "repository": "https://github.com/kevinnadar22/TG-File-Store",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -38,12 +38,12 @@
     "SITE": {
       "description": "Your preferred shortner site Eg: droplink.co. Avoid https:// or http://.",
       "value": "",
- 
+      "required": true
     }, 
     "API_KEY": {
       "description": "You API_ID from https://droplink.co/member/tools/api",
       "value": "",
-   
+      "required": true
     },     
     "OWNER_ID": {
       "description": "give your telegram user id here",

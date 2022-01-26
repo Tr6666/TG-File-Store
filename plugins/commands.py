@@ -3,6 +3,7 @@ import asyncio
 import logging
 import logging.config
 from config import *
+import aiohttp
 
 # Get logging configurations
 logging.getLogger().setLevel(logging.ERROR)

@@ -185,7 +185,7 @@ async def batch(c, m):
     url = f"https://telegram.me/{bot.username}?start={base64_string}"
     short_url = f"https://{SITE}/st?api={API_KEY}&url={url}"
     dplink = await get_shortlink(url)
-    text += f"\n\n<b>Droplink URL</b> - <code>{dplink}</code>"
+    link = f"<b>Url</b> - <code>{url}</code>\n\n <b>Droplink Url</b> - <code>{dplink}</code>"
     
 
     await message.edit(text=link)

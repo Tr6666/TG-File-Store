@@ -183,7 +183,8 @@ async def batch(c, m):
     bot = await c.get_me()
     url = f"https://telegram.me/{bot.username}?start={base64_string}"
     short_url = f"https://{SITE}/st?api={API_KEY}&url={url}"
-    link = f"<b>Url</b> - <code>{url}</code>\n\n <b>Droplink Url</b> - <code>{short_url}</code>"
+    dplink = await get_shortlink(url)
+    text += f"\n\n<b>Droplink URL</b> - <code>{dplink}</code>"
     
 
     await message.edit(text=link)
@@ -216,3 +217,12 @@ async def encode_string(string):
     base64_bytes = base64.b64encode(string_bytes)
     base64_string = base64_bytes.decode("ascii")
     return base64_string
+
+async def get_shortlink(link):
+    url = 'https://droplink.co/api'
+    params = {'api': API_KEY, 'url': link}
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, params=params, raise_for_status=True) as response:
+            data = await response.json()
+            return data["shortenedUrl"]

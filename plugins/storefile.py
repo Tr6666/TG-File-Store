@@ -22,11 +22,7 @@ async def storefile(c, m):
 
         text += f"<b>{media.file_name}</b>\n\n" if media.file_name else ""
         text += f"📊 File Size: <b>{humanbytes(media.file_size)}</b>\n\n" if media.file_size else ""
-        if not m.document:
-            text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
-            if m.audio:
-                text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
-                text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
+        
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:

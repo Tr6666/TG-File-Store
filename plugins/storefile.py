@@ -14,7 +14,6 @@ async def storefile(c, m):
     if IS_PRIVATE:
         if m.from_user.id not in AUTH_USERS:
             return
-    send_message = await m.reply_text("**Processing...**", quote=True)
     media = m.document or m.video or m.audio or m.photo
     # text
     text = ""
@@ -49,11 +48,13 @@ async def storefile(c, m):
     ]]
 
     # sending message
-    await send_message.edit(
+    await m.reply_text(
         text,
-        reply_markup=InlineKeyboardMarkup(buttons)
+        reply_markup=InlineKeyboardMarkup(buttons),
+        qoute=True
     )
 
+    await send_message.edit
 
 #################################### FOR CHANNEL################################################
 

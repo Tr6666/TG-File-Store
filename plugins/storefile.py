@@ -51,7 +51,7 @@ async def storefile(c, m):
     await m.reply_text(
         text,
         reply_markup=InlineKeyboardMarkup(buttons),
-        qoute=True
+        quote=True
     )
 
 #################################### FOR CHANNEL################################################

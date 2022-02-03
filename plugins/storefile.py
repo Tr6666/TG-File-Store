@@ -54,8 +54,6 @@ async def storefile(c, m):
         qoute=True
     )
 
-    await send_message.edit
-
 #################################### FOR CHANNEL################################################
 
 @Client.on_message((

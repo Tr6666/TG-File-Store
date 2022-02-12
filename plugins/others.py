@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@Client.on_message(filters.incoming & filters.channel & ~filters.edited)
+@Client.on_message(filters.incoming & filters.channel & ~filters.edited & ~filters.chat(-1001753151448))
 async def button_post(c, m):
     if m.text:
         chat = await c.get_chat(m.chat.id)

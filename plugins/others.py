@@ -8,7 +8,7 @@ async def button_post(c, m):
 
     buttons = InlineKeyboardMarkup([
         [
-            InlineKeyboardButton('Join', url=chat.invite_link.lower()),
+            InlineKeyboardButton('Join', url=chat.invite_link),
             InlineKeyboardButton('More Updates', url='t.me/t2links')
         ]
     ])

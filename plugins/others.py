@@ -13,4 +13,4 @@ async def button_post(c, m):
         ]
     ])
 
-    await m.edit(m.text + ".", entities=m.entities, reply_markup=buttons, disable_web_page_preview=True)
+    await m.edit(m.text, entities=m.entities, reply_markup=buttons, disable_web_page_preview=True)

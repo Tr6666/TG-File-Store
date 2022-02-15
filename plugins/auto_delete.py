@@ -7,7 +7,7 @@ CHAT = [-1001793534052, -1001400526156, -1001230546236, -1001286887151, -1001751
 dicts = []
 
 
-@Client.on_message(~filters.command('del') & filters.chat(CHAT) & filters.channel & filters.edited)
+@Client.on_message(~filters.command('del') & filters.chat(CHAT) & filters.channel & ~filters.edited)
 async def save_message_id(c: Client, m: Message):
     global dicts
     message_id = m.message_id

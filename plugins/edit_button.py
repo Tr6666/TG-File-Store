@@ -42,3 +42,20 @@ async def auto_delete(c: Client, m: Message):
         await c.delete_messages(chat_id=message["chat_id"], message_ids=int(message["message_id"]))
     dicts = []
     await txt.edit("Deleted")
+        
+        
+        
+@Client.on_message(filters.incoming & filters.channel & ~filters.edited & filters.chat(-1001667892071))
+async def button_post(c, m):        
+        if m.text:
+                        
+          chat = await c.get_chat(m.chat.id)
+
+          buttons = InlineKeyboardMarkup([
+              [
+                  InlineKeyboardButton('Join', url=chat.invite_link),
+                  InlineKeyboardButton('More Updates', url='t.me/t2links')
+              ]
+          ])
+
+          await m.edit(m.text, entities=m.entities, reply_markup=buttons, disable_web_page_preview=True)

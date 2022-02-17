@@ -46,7 +46,7 @@ async def auto_delete(c: Client, m: Message):
         
         
 @Client.on_message(filters.incoming & filters.channel & ~filters.edited & filters.chat(-1001667892071))
-async def button_post(c, m):        
+async def main_channel_button_post(c, m):        
         if m.text:
                         
           chat = await c.get_chat(m.chat.id)

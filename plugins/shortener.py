@@ -182,7 +182,8 @@ async def shorten(c, m):
             await m.reply_photo(id, caption=r)
 
         await text.delete()
-    except:
+    except Exception as e:
+        print(e)
         await text.delete()
         await m.reply_text("`Some Error Occurred, Reply only to MDisk links`")
 

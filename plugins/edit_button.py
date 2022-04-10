@@ -26,7 +26,7 @@ async def button_post(c, m):
         buttons = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton('Join', url=chat.invite_link),
-                InlineKeyboardButton('More Updates', url='t.me/t2links')
+                InlineKeyboardButton('More Updates', url='https://t.me/T2linksAnnc')
             ]
         ])
 
@@ -54,7 +54,7 @@ async def main_channel_button_post(c, m):
           buttons = InlineKeyboardMarkup([
               [
                   InlineKeyboardButton('Join', url=chat.invite_link),
-                  InlineKeyboardButton('More Updates', url='t.me/t2links')
+                  InlineKeyboardButton('More Updates', url='https://t.me/T2linksAnnc')
               ]
           ])
 

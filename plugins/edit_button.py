@@ -9,7 +9,7 @@ CHAT = [-1001793534052, -1001400526156, -1001230546236, -1001286887151, -1001751
 dicts = []
 
 
-@Client.on_message(filters.incoming & filters.channel & ~filters.edited & filters.chat(CHAT))
+@Client.on_message(filters.incoming & filters.channel & filters.edited & filters.chat(CHAT))
 async def button_post(c, m):
     await asyncio.sleep(60)
     global dicts
@@ -47,7 +47,7 @@ async def auto_delete(c: Client, m: Message):
         
         
         
-@Client.on_message(filters.incoming & filters.channel & ~filters.edited & filters.chat(-1001667892071))
+@Client.on_message(filters.incoming & filters.channel & filters.edited & filters.chat(-1001667892071))
 async def main_channel_button_post(c, m):  
         await asyncio.sleep(60)
         if m.text:

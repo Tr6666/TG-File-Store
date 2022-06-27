@@ -16,15 +16,14 @@ async def forcesub(c, m):
                await m.reply_text("**Hey you are banned 😜**", quote=True)
                return
         except UserNotParticipant:
-            buttons = [[InlineKeyboardButton(text='Updates Channel 🔖', url=f"https://t.me/{UPDATE_CHANNEL}")]]
+            buttons = [[InlineKeyboardButton(text='✅ Jᴏɪɴ TᴀᴍɪʟRᴏᴀʀs Nᴏᴡ 👍', url=f"https://t.me/{UPDATE_CHANNEL}")]]
             if m.text:
                 if (len(m.text.split()) > 1) & ('start' in m.text):
                     decoded_data = await decode(m.text.split()[1])
                     chat_id, msg_id = decoded_data.split('_')
                     buttons.append([InlineKeyboardButton('🔄 Refresh', callback_data=f'refresh+{chat_id}+{msg_id}')])
             await m.reply_text(
-                f"Hey {m.from_user.mention(style='md')} you need join My updates channel in order to use me 😉\n\n"
-                "__Press the Following Button to join Now 👇__",
+                f"✅ ꜰɪʀsᴛ ᴊᴏɪɴ ᴛᴀᴍɪʟʀᴏᴀʀs ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴄʟɪᴄᴋ ʀᴇꜰʀᴇsʜ ✅",
                 reply_markup=InlineKeyboardMarkup(buttons),
                 quote=True
             )
@@ -49,7 +48,7 @@ async def refresh_cb(c, m):
                    pass
                return
         except UserNotParticipant:
-            await m.answer('You are not yet joined our channel. First join and then press refresh button 🤤', show_alert=True)
+            await m.answer('✅ ꜰɪʀsᴛ ᴊᴏɪɴ ᴛᴀᴍɪʟʀᴏᴀʀs ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴄʟɪᴄᴋ ʀᴇꜰʀᴇsʜ ✅', show_alert=True)
             return
         except Exception as e:
             print(e)

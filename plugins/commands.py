@@ -28,22 +28,15 @@ async def start(c, m, cb=False):
     owner_username = owner.username if owner.username else 'Ns_bot_updates'
 
     # start text
-    text = f"""Hey! {m.from_user.mention(style='md')}
+    text = f"""𝗛i(or)வணக்கம்{m.from_user.mention(style='md')}
 
-💡 ** I am Telegram File Store Bot**
-
-`You can store your Telegram Media for permanent Link!`
-
+ᴡᴀᴛᴄʜ/ᴅᴏᴡɴʟᴏᴀᴅ sᴇʀɪᴀʟs ᴜsɪɴɢ ᴍᴇ
 """
 
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('My Father 👨‍✈️', url=f"https://t.me/t2links"),
-            InlineKeyboardButton('Help 💡', callback_data="help")
-        ],
-        [
-            InlineKeyboardButton('About 📕', callback_data="about")
+            InlineKeyboardButton('✅ Jᴏɪɴ TᴀᴍɪʟRᴏᴀʀs Nᴏᴡ 👍', url=f"https://t.me/Tamil_Roars")
         ]
     ]
 
